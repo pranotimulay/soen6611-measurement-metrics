@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>AggregateTranslator.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * this work for additional information regarding copyright ownership.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * (the &#34;License&#34;); you may not use this file except in compliance with</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the License.  You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Unless required by applicable law or agreed to in writing, software</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * distributed under the License is distributed on an &#34;AS IS&#34; BASIS,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * See the License for the specific language governing permissions and</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * limitations under the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.apache.commons.lang3.text.translate;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.Writer;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.apache.commons.lang3.ArrayUtils;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Executes a sequence of translators one after the other. Execution ends whenever</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the first translator consumes codepoints from the input.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 3.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @deprecated as of 3.6, use commons-text</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * &#60;a href=&#34;https://commons.apache.org/proper/commons-text/javadocs/api-release/org/apache/commons/text/AggregateTranslator.html&#34;&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * AggregateTranslator&#60;/a&#62; instead</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Deprecated</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class AggregateTranslator extends CharSequenceTranslator {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final CharSequenceTranslator[] translators;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Specify the translators to be used at creation time.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param translators CharSequenceTranslator array to aggregate</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public AggregateTranslator(final CharSequenceTranslator... translators) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.translators = ArrayUtils.clone(translators);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * The first translator to consume codepoints from the input is the &#39;winner&#39;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Execution stops with the number of consumed codepoints being returned.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * {@inheritDoc}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int translate(final CharSequence input, final int index, final Writer out) throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (final CharSequenceTranslator translator : translators) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            final int consumed = translator.translate(input, index, out);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_56'/>
+56
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_56'>1</a>
+<span>
+1. translate : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (consumed != 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_57'/>
+57
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_57'>1</a>
+<span>
+1. translate : replaced int return with 0 for org/apache/commons/lang3/text/translate/AggregateTranslator::translate &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return consumed;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        return 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_56'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>translate<br/><b>Killed by : </b>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHtmlVersions()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3d80d6cd_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3d80d6cd_57'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>translate<br/><b>Killed by : </b>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHtmlVersions()]</span></span> replaced int return with 0 for org/apache/commons/lang3/text/translate/AggregateTranslator::translate &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeXml()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testByteArray()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testBooleanArray()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeEcmaScript()] (1 ms)</li><li>org.apache.commons.lang3.StringUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsTest]/[method:testEscapeSurrogatePairsLang858()] (2 ms)</li><li>org.apache.commons.lang3.StringUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsTest]/[method:testUnescapeSurrogatePairs()] (4 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testNestingPerson()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testDoubleArray()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testCharArray()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeJava()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testDate()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeXmlSupplementaryCharacters()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeHexCharsHtml()] (376 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHtmlHighUnicode()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeXml11()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeUnknownEntity()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeXmlSupplementaryCharacters()] (3 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testLong()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testShortArray()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHiragana()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testLongArray()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeEcmaScript()] (3 ms)</li><li>org.apache.commons.lang3.StringUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsTest]/[method:testEscapeSurrogatePairs()] (3 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testFloatArray()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testLang708()] (2 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testArray()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testObject()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHtmlVersions()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeXmlAllCharacters()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testStandaloneAmphersand()] (4 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testAppendSuper()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testLANG1396()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeHtml()] (3 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeHtml4()] (2 ms)</li><li>org.apache.commons.lang3.AnnotationUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.AnnotationUtilsTest]/[method:testAnnotationsOfDifferingTypes()] (9 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testLang720()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testLang313()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testLang911()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeJson()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeXml10()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeJava()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testLANG1395()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testObjectArray()] (2 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testEscapeJavaWithSlash()] (1 ms)</li><li>org.apache.commons.lang3.StringEscapeUtilsTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.StringEscapeUtilsTest]/[method:testUnescapeJson()] (6 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testPerson()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testChar()] (1 ms)</li><li>org.apache.commons.lang3.builder.JsonToStringStyleTest.[engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.JsonToStringStyleTest]/[method:testIntArray()] (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.0
+
+</body>
+</html>
