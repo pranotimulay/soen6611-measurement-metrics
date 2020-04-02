@@ -1,0 +1,31 @@
+cloc-1.62.exe -diff commons-net-1.4.1 commons-net-1.4.0
+     191 text files.
+     191 text files.
+      70 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=2.86 s (0.3 files/s, 0.3 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+XML
+ same                            1              0             46            227
+ modified                        1              0              0              2
+ added                           0              0              0              0
+ removed                         0              0              0              7
+Ant
+ same                            0              0              2            163
+ modified                        1              0              0              2
+ added                           0              0              2              0
+ removed                         0              0              0              0
+Java
+ same                          177              0          18176          16816
+ modified                        8              0              6             12
+ added                           0              0              0              0
+ removed                         0              0              0              0
+-------------------------------------------------------------------------------
+SUM:
+ same                          178              0          18224          17206
+ modified                       10              0              6             16
+ added                           0              0              2              0
+ removed                         0              0              0              7
+-------------------------------------------------------------------------------
