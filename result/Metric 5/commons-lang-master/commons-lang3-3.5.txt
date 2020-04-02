@@ -1,0 +1,56 @@
+cloc-1.62.exe -diff commons-lang3-3.5-src commons-lang3-3.4-src
+     362 text files.
+     340 text files.
+     151 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=18.53 s (0.1 files/s, 0.1 lines/s)
+----------------------------------------------------------------------------------------
+Language                              files          blank        comment           code
+----------------------------------------------------------------------------------------
+Bourne Shell
+ same                                     1              0              2              2
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Velocity Template Language
+ same                                     1              0              0            119
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Maven
+ same                                     0              0             30            690
+ modified                                 1              0              0              9
+ added                                    0              0              0             17
+ removed                                  0              2              1             57
+XML
+ same                                    17              0            484           3290
+ modified                                 9              0              3             61
+ added                                    0              2              1              3
+ removed                                  0             13             28            191
+HTML
+ same                                     1              0             16            236
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Ant
+ same                                     0              0              0              0
+ modified                                 0              0              0              0
+ added                                    2             37             61            296
+ removed                                  0              0              0              0
+Java
+ same                                    21              0          45483          62922
+ modified                               259              0            696           1743
+ added                                    1             64            627           1382
+ removed                                 25           1251           4867           7857
+YAML
+ same                                     0              0              0              0
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  1              3             14              8
+-------------------------------------------------------------------------------
+SUM:
+ same                                    41              0          46015          67259
+ modified                               269              0            699           1813
+ added                                    3            103            689           1698
+ removed                                 26           1269           4910           8113
+-------------------------------------------------------------------------------
