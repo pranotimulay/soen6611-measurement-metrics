@@ -1,0 +1,56 @@
+cloc-1.62.exe -diff commons-math3-3.1.1-src commons-math3-3.1-src
+    1305 text files.
+    1303 text files.s
+     514 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=26.75 s (0.0 files/s, 0.0 lines/s)
+----------------------------------------------------------------------------------------
+Language                              files          blank        comment           code
+----------------------------------------------------------------------------------------
+Bourne Shell
+ same                                     1              0             17              4
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+CSS
+ same                                     1              0             16              1
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Maven
+ same                                     0              0             20            400
+ modified                                 1              0              0              4
+ added                                    0              0              0              0
+ removed                                  0              0              4              4
+XML
+ same                                    27              0            609           8484
+ modified                                 3              0              0             17
+ added                                    0              0              0              0
+ removed                                  0              1              0             14
+Ant
+ same                                     1              0             65            217
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Velocity Template Language
+ same                                     1              0              0            123
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+XSLT
+ same                                     1              0             14             50
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Java
+ same                                  1173              0          93246         152732
+ modified                                10              0              6             10
+ added                                    0              2              0              8
+ removed                                  2             83            165            477
+-------------------------------------------------------------------------------
+SUM:
+ same                                  1205              0          93987         162011
+ modified                                14              0              6             31
+ added                                    0              2              0              8
+ removed                                  2             84            169            495
+-------------------------------------------------------------------------------

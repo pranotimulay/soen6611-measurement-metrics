@@ -1,0 +1,56 @@
+cloc-1.62.exe -diff commons-math3-3.1-src commons-math3-3.0-src
+    1303 text files.
+    1048 text files.s
+     445 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=23.96 s (0.0 files/s, 0.0 lines/s)
+----------------------------------------------------------------------------------------
+Language                              files          blank        comment           code
+----------------------------------------------------------------------------------------
+XSLT
+ same                                     1              0             14             50
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+CSS
+ same                                     0              0              0              1
+ modified                                 1              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              1             16              0
+Ant
+ same                                     0              0             62            210
+ modified                                 1              0              2              1
+ added                                    0              0              0              1
+ removed                                  0              1              1              6
+Velocity Template Language
+ same                                     1              0              0            123
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+Maven
+ same                                     0              0             14            349
+ modified                                 1              0              1              6
+ added                                    0              0              0              3
+ removed                                  0              3              5             49
+XML
+ same                                    20              0            591           7732
+ modified                                10              0             16             75
+ added                                    1              4             19             89
+ removed                                  0             10              2            694
+Java
+ same                                   205              0          70469         111943
+ modified                               753              0           2214           3907
+ added                                    8            714           1471           4570
+ removed                                225           5853          20569          36900
+Bourne Shell
+ same                                     0              0              0              0
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  1              3             17              4
+-------------------------------------------------------------------------------
+SUM:
+ same                                   227              0          71150         120408
+ modified                               766              0           2233           3989
+ added                                    9            718           1490           4663
+ removed                                226           5871          20610          37653
+-------------------------------------------------------------------------------
