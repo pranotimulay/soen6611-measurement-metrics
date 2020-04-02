@@ -1,51 +1,51 @@
-cloc-1.62.exe -diff commons-lang3-3.3-src commons-lang3-3.2.1-src
+cloc-1.62.exe -diff commons-lang3-3.3-src commons-lang3-3.2-src
      330 text files.
-     312 text files.
-     142 files ignored.
+     311 text files.
+     141 files ignored.
 
-http://cloc.sourceforge.net v 1.62  T=13.67 s (0.1 files/s, 0.1 lines/s)
+http://cloc.sourceforge.net v 1.62  T=12.21 s (0.1 files/s, 0.1 lines/s)
 ----------------------------------------------------------------------------------------
 Language                              files          blank        comment           code
 ----------------------------------------------------------------------------------------
+Maven
+ same                                     0              0             29            645
+ modified                                 1              0              0              3
+ added                                    0              0              0              3
+ removed                                  0              0              0             15
+XML
+ same                                    16              0            486           3181
+ modified                                10              0              2             44
+ added                                    0             31             39            604
+ removed                                  0              2              0             44
 Velocity Template Language
  same                                     0              0              0            106
  modified                                 1              0              0              1
  added                                    0              0              0              0
  removed                                  0              5              0             12
-XML
- same                                    16              0            486           3207
- modified                                10              0              2             28
- added                                    0             31             39            604
- removed                                  0              1              0             34
 Bourne Shell
  same                                     1              0              2              2
  modified                                 0              0              0              0
  added                                    0              0              0              0
  removed                                  0              0              0              0
-Maven
- same                                     0              0             29            645
- modified                                 1              0              0              3
- added                                    0              0              1              4
- removed                                  0              0              0             15
-Java
- same                                   190              0          42959          61109
- modified                                57              0            151            337
- added                                    0              2             46            172
- removed                                 27            410           2388           2117
 HTML
  same                                     1              0             16            236
  modified                                 0              0              0              0
  added                                   13             26            186            117
  removed                                  0              0              0              0
+Java
+ same                                   187              0          42937          61055
+ modified                                60              0            156            362
+ added                                    0              3             46            179
+ removed                                 27            414           2405           2146
 Ant
- same                                     0              0             35            179
+ same                                     0              0             35            178
  modified                                 1              0              1              1
  added                                    0              0              0              0
- removed                                  1             20             25            116
+ removed                                  1             20             25            117
 -------------------------------------------------------------------------------
 SUM:
- same                                   208              0          43527          65484
- modified                                70              0            154            370
- added                                   13             59            272            897
- removed                                 28            436           2413           2294
+ same                                   205              0          43505          65403
+ modified                                73              0            159            411
+ added                                   13             60            271            903
+ removed                                 28            441           2430           2334
 -------------------------------------------------------------------------------
