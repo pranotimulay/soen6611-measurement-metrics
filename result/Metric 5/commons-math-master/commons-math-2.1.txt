@@ -1,0 +1,56 @@
+cloc-1.62.exe -diff commons-math-2.1-src commons-math-2.0-src
+     785 text files.
+     748 text files.
+     283 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=12.71 s (0.1 files/s, 0.1 lines/s)
+----------------------------------------------------------------------------------------
+Language                              files          blank        comment           code
+----------------------------------------------------------------------------------------
+Velocity Template Language
+ same                                     0              0              0             97
+ modified                                 1              0              0              6
+ added                                    0              0              0              0
+ removed                                  0              0              0              2
+Maven
+ same                                     0              0             14            244
+ modified                                 1              0              0              6
+ added                                    0              0             74              4
+ removed                                  0              0              0             62
+Ant
+ same                                     0              0             56            199
+ modified                                 1              0              2              3
+ added                                    0              0              0              0
+ removed                                  0              0              0              4
+XML
+ same                                    17              0            541           5126
+ modified                                13              0             12             90
+ added                                    0              2              0             33
+ removed                                  0             45             35            519
+Java
+ same                                    52              0          47585          71253
+ modified                               593              0           3965           4194
+ added                                    0            431            924           2988
+ removed                                 30           1194           4331           6586
+XSLT
+ same                                     1              0             14             50
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+CSS
+ same                                     1              0              0              1
+ modified                                 0              0              0              0
+ added                                    0              0              0              0
+ removed                                  0              0              0              0
+HTML
+ same                                    25              0            473            447
+ modified                                 7              0              7              1
+ added                                    3              6             45             14
+ removed                                  2             37             30            208
+-------------------------------------------------------------------------------
+SUM:
+ same                                    96              0          48683          77417
+ modified                               616              0           3986           4300
+ added                                    3            439           1043           3039
+ removed                                 32           1276           4396           7381
+-------------------------------------------------------------------------------
