@@ -1,0 +1,36 @@
+cloc-1.62.exe -diff commons-logging-1.0.3-src commons-logging-1.0.1-src
+      42 text files.
+      24 text files.
+      42 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=0.44 s (2.3 files/s, 2.3 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+XML
+ same                            1              0              0             39
+ modified                        1              0              0              2
+ added                           0              0              0              1
+ removed                         0              1              0              1
+Ant
+ same                            0              0             29            154
+ modified                        1              0              1             17
+ added                           0              0              1              1
+ removed                         0             38              3            259
+HTML
+ same                            1              0              9            694
+ modified                        3              0              0             42
+ added                           0              1              0             13
+ removed                         2              6              0             71
+Java
+ same                            0              0           1818            946
+ modified                       12              0             88             93
+ added                           0              2             26            114
+ removed                        14            523           1143            925
+-------------------------------------------------------------------------------
+SUM:
+ same                            2              0           1856           1833
+ modified                       17              0             89            154
+ added                           0              3             27            129
+ removed                        16            568           1146           1256
+-------------------------------------------------------------------------------

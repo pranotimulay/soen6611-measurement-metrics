@@ -1,0 +1,46 @@
+cloc-1.62.exe -diff commons-logging-1.1.1-src commons-logging-1.1-src
+     108 text files.
+      97 text files.
+     119 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=1.24 s (0.8 files/s, 0.8 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Ant
+ same                            0              0            185            443
+ modified                        1              0              6             19
+ added                           0              1              0              0
+ removed                         0              0              2             11
+CSS
+ same                            0              0              0              0
+ modified                        1              0              0              1
+ added                           0              0              0              0
+ removed                         0              3             16              0
+HTML
+ same                            0              0             40            413
+ modified                        5              0             20             10
+ added                           0              5              0              0
+ removed                         0              0             10              0
+Java
+ same                            0              0           4958           4864
+ modified                       61              0            251            136
+ added                           0              2            116              6
+ removed                         4             77            578            426
+Maven
+ same                            0              0              0              0
+ modified                        0              0              0              0
+ added                           0              0              0              0
+ removed                         2             47            100            621
+XML
+ same                            0              0            135           1717
+ modified                       12              0             58            761
+ added                           1             19             15             48
+ removed                         4             74            215            326
+-------------------------------------------------------------------------------
+SUM:
+ same                            0              0           5318           7437
+ modified                       80              0            335            927
+ added                           1             27            131             54
+ removed                        10            201            921           1384
+-------------------------------------------------------------------------------
