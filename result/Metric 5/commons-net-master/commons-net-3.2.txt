@@ -1,0 +1,36 @@
+cloc-1.62.exe -diff commons-net-3.2-src commons-net-3.1-src
+     271 text files.
+     266 text files.
+     129 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=5.18 s (0.2 files/s, 0.2 lines/s)
+----------------------------------------------------------------------------------------
+Language                              files          blank        comment           code
+----------------------------------------------------------------------------------------
+Velocity Template Language
+ same                                     0              0              0             56
+ modified                                 1              0              0             21
+ added                                    0              7              0             46
+ removed                                  0              0              0             20
+Maven
+ same                                     0              0             34            320
+ modified                                 1              0              0              8
+ added                                    0              0              1             12
+ removed                                  0              0              2             12
+Java
+ same                                   143              0          22776          23588
+ modified                                95              0            214            184
+ added                                    0              5             31             61
+ removed                                  5             95            351            601
+XML
+ same                                     9              0            400           1741
+ modified                                 4              0              0             26
+ added                                    2              6             31             86
+ removed                                  2              5             31            152
+-------------------------------------------------------------------------------
+SUM:
+ same                                   152              0          23210          25705
+ modified                               101              0            214            239
+ added                                    2             18             63            205
+ removed                                  7            100            384            785
+-------------------------------------------------------------------------------

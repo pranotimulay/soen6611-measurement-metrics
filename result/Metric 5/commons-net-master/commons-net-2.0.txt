@@ -1,0 +1,36 @@
+cloc-1.62.exe -diff commons-net-2.0-src commons-net-1.4.1
+     210 text files.
+     191 text files.
+      87 files ignored.
+
+http://cloc.sourceforge.net v 1.62  T=3.06 s (0.3 files/s, 0.3 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java
+ same                            0              0          13265          10899
+ modified                      129              0            857           1196
+ added                          56           1041           4060           4733
+ removed                        65           1623           4747           6902
+Maven
+ same                            0              0              0              0
+ modified                        0              0              0              0
+ added                           0              0              0              0
+ removed                         1             24             14            212
+XML
+ same                            0              0              0              0
+ modified                        0              0              0              0
+ added                           2             41             46            236
+ removed                        12            124            222           1062
+Ant
+ same                            0              0              0              0
+ modified                        0              0              0              0
+ added                           1              4              2            165
+ removed                         0              0              0              0
+-------------------------------------------------------------------------------
+SUM:
+ same                            0              0          13265          10899
+ modified                      129              0            857           1196
+ added                          59           1086           4108           5134
+ removed                        78           1771           4983           8176
+-------------------------------------------------------------------------------
