@@ -25,10 +25,10 @@ The aim of this project is to measure different projects with respect to various
 
 # Tool Requirements and Pre-requisites 
 #### EclEmma (JaCoCo)
-1. Prerequisites : 
-    1.1 Eclipse 3.8 or higher
-    1.2 Java 1.5 or higher. 
-    1.3 Eclipse installation must have the Java development tools (included in the default SDK installation)
+1. Prerequisites : <br/>
+    1.1 Eclipse 3.8 or higher <br/>
+    1.2 Java 1.5 or higher. <br/>
+    1.3 Eclipse installation must have the Java development tools (included in the default SDK installation) <br/>
 2. Installation Steps: 
 ```
     Step 1. Go to Help → Eclipse Marketplace in Eclipse
@@ -64,8 +64,8 @@ The aim of this project is to measure different projects with respect to various
   sudo pkg install cloc                  # FreeBSD
   sudo port install cloc                 # Mac OS X with MacPorts
 ```  
-2. To run cloc on Windows computers, 
-    2.1 Open up a command prompt (aka DOS)
+2. To run cloc on Windows computers, <br/>
+    2.1 Open up a command prompt (aka DOS) <br/>
     2.2 invoke cloc.exe
 ```
 prompt> cloc
