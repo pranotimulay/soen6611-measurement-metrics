@@ -11,10 +11,10 @@ The aim of this project is to measure different projects with respect to various
 6. **Software Defect Density**: the number of defects per size of the software or application area of the software
 
 #### Projects
-1. **Apache Commons Logging** - [*project details*](https://commons.apache.org/proper/commons-logging/) , [*source-code*](https://github.com/apache/commons-logging) 
-2. **Apache Commons Lang** - [*project details*](https://commons.apache.org/proper/commons-lang/) , [*source-code*](https://github.com/apache/commons-lang)
-3. **Apache Commons Net** - [*project details*](https://commons.apache.org/proper/commons-net/) , [*source-code*](https://github.com/apache/commons-net)
-4. **Apache Commons Math** - [*project details*](http://commons.apache.org/proper/commons-math/) , [*source-code*](https://github.com/apache/commons-math)
+1. **Apache Commons Logging** - [*documentation*](https://commons.apache.org/proper/commons-logging/) , [*source-code*](https://github.com/apache/commons-logging) 
+2. **Apache Commons Lang** - [*documentation*](https://commons.apache.org/proper/commons-lang/) , [*source-code*](https://github.com/apache/commons-lang)
+3. **Apache Commons Net** - [*documentation*](https://commons.apache.org/proper/commons-net/) , [*source-code*](https://github.com/apache/commons-net)
+4. **Apache Commons Math** - [*documentation*](http://commons.apache.org/proper/commons-math/) , [*source-code*](https://github.com/apache/commons-math)
 
 #### File Structure
     ├── correlation                               # Documents used to calculate correlation between metrics
@@ -32,5 +32,3 @@ The aim of this project is to measure different projects with respect to various
 | Avinash Damodaran          | 40078258 | avinashdamu323@gmail.com      |
 | Niralkumar Hemantkumar Lad | 40080612 | niralhlad.concordia@gmail.com |
 | Shalin Rohitkumar Patel    | 40088004 | shalinpatel610@gmail.com      |
-
-# File Structure 
