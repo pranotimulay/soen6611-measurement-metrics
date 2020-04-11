@@ -1,5 +1,4 @@
-# A study of Software Measurement Metrics and their Correlation analysis
-
+# Software Measurement Metrics Correlation Analysis
 The aim of this project is to measure different projects with respect to various metrics and analyze the correlation between these metrics. The metrics being studied are enlisted below, followed by the open-source projects they are being applied on.
 
 #### Metrics
